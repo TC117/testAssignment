@@ -19,7 +19,7 @@ export class LoginPage {
         this.USERNAME_EDITBOX = page.locator('#userName');
         this.PASSWORD_EDITBOX = page.locator('#password');
         this.LOGIN_BUTTON = page.locator('#login');
-        this.BOOKS_SEARCH_BOX = page.getByPlaceholder('Type to search');
+        this.SEARCH_BOX = page.getByPlaceholder('Type to search');
     }
 
     async navigateToURL(): Promise<void> {
@@ -33,11 +33,11 @@ export class LoginPage {
     async loginToApplication(): Promise<void> {
         const decipherPassword = await webActions.decipherPassword();
         await this.USERNAME_EDITBOX.fill(testConfig.username);
-        await this.PASSWORD_EDITBOX.fill(decipherPassword);
+        await this.PASSWORD_EDITBOX.fill(testConfig.password);
         await this.LOGIN_BUTTON.click();
     }
 
     async verifyProfilePage(): Promise<void> {
-        await expect(this.BOOKS_SEARCH_BOX).toBeVisible();
+        await expect(this.SEARCH_BOX).toBeVisible();
     }
 }

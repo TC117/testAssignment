@@ -16,7 +16,7 @@ jobs:
   build:
     # Specify the operating system for this job
     runs-on: ubuntu-latest
-    env:
+    # env:
       # SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
 
     # Define the steps to execute in this job

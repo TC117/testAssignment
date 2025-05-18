@@ -17,7 +17,7 @@ jobs:
     # Specify the operating system for this job
     runs-on: ubuntu-latest
     env:
-      SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+      # SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
 
     # Define the steps to execute in this job
     steps:
@@ -69,7 +69,7 @@ jobs:
 
       # Step to upload artifact
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: html-report
           path: html-report.zip
@@ -82,12 +82,12 @@ jobs:
         run: echo "::set-output name=artifact_url::https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         if: always()
 
-      # Send Slack notification with html-reprt url once the tests are completed
-      - name: Send Slack notification
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_CHANNEL: "#playwright-test-reports"
-          SLACK_USERNAME: Playwright GitHub Actions
-          SLACK_MESSAGE: "Test results are available in [Artifacts section](${{ steps.artifact_link.outputs.artifact_url }}) as html-report."
-        if: always()
+      # # Send Slack notification with html-reprt url once the tests are completed
+      # - name: Send Slack notification
+      #   uses: rtCamp/action-slack-notify@v2
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+      #     SLACK_CHANNEL: "#playwright-test-reports"
+      #     SLACK_USERNAME: Playwright GitHub Actions
+      #     SLACK_MESSAGE: "Test results are available in [Artifacts section](${{ steps.artifact_link.outputs.artifact_url }}) as html-report."
+      #   if: always()

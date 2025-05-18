@@ -6,7 +6,7 @@ import { expect } from 'allure-playwright';
 const Jobtitle = 'HR Manager';
 const Status = 'Full-Time Permanent'
 
-test.only(`Verify Search`, { tag: '@Smoke' }, async ({ loginPage, PIMPage }) => {
+test(`Verify Search`, { tag: '@Smoke' }, async ({ loginPage, PIMPage }) => {
     await test.step(`Navigate to Application`, async () => {
         await loginPage.navigateToURL("/web/index.php/pim/viewEmployeeList");
     });

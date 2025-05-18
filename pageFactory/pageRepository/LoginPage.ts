@@ -22,17 +22,19 @@ export class LoginPage {
         this.SIDEPANEL = this.page.locator(`//aside[@class='oxd-sidepanel']`);
     }
 
-    async navigateToURL(): Promise<void> {
-        await this.page.goto("/");
+    async navigateToURL(url?: string): Promise<void> {
+        await this.page.goto(url ?? "/");
     }
 
     async clickOnLoginMainButton(): Promise<void> {
         await this.LOGIN_BUTTON.click();
     }
 
-    async loginToApplication(): Promise<void> {
-        await this.USERNAME_EDITBOX.fill(testConfig.username);
-        await this.PASSWORD_EDITBOX.fill(testConfig.password);
+    async loginToApplication(username?: string, password?: string): Promise<void> {
+        const user = username ?? testConfig.username;
+        const pass = password ?? testConfig.password;
+        await this.USERNAME_EDITBOX.fill(user);
+        await this.PASSWORD_EDITBOX.fill(pass);
         await this.LOGIN_BUTTON.click();
     }
 

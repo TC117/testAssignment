@@ -32,3 +32,43 @@
 {"level":"info","message":"Test Case Completed : Verify the text contents of PDF file. Status : passed"}
 {"level":"info","message":"Test Case Started : Verify Widgets Page"}
 {"level":"info","message":"Test Case Completed : Verify Widgets Page Status : passed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : failed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : passed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login to Application"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : passed"}
+{"level":"info","message":"Test Case Started : Verify Book Store Login"}
+{"level":"info","message":"Executing Step : Navigate to Application"}
+{"level":"info","message":"Executing Step : Login to Application"}
+{"level":"info","message":"Executing Step : Verify User is logged in and navigated to Profile page"}
+{"level":"info","message":"Test Case Completed : Verify Book Store Login Status : passed"}

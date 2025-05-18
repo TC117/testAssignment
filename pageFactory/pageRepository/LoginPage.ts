@@ -10,16 +10,16 @@ export class LoginPage {
     readonly USERNAME_EDITBOX: Locator;
     readonly PASSWORD_EDITBOX: Locator;
     readonly LOGIN_BUTTON: Locator;
-    readonly BOOKS_SEARCH_BOX: Locator;
+    readonly SIDEPANEL: Locator;
 
     constructor(page: Page, context: BrowserContext) {
         this.page = page;
         this.context = context;
         webActions = new WebActions(this.page, this.context);
-        this.USERNAME_EDITBOX = page.locator('#userName');
-        this.PASSWORD_EDITBOX = page.locator('#password');
-        this.LOGIN_BUTTON = page.locator('#login');
-        this.SEARCH_BOX = page.getByPlaceholder('Type to search');
+        this.USERNAME_EDITBOX = this.page.locator("//input[@name='username']");
+        this.PASSWORD_EDITBOX = this.page.locator("//input[@name='password']");
+        this.LOGIN_BUTTON = this.page.locator("//button[contains(@class,'login-button')]");
+        this.SIDEPANEL = this.page.locator(`//aside[@class='oxd-sidepanel']`);
     }
 
     async navigateToURL(): Promise<void> {
@@ -31,13 +31,12 @@ export class LoginPage {
     }
 
     async loginToApplication(): Promise<void> {
-        const decipherPassword = await webActions.decipherPassword();
         await this.USERNAME_EDITBOX.fill(testConfig.username);
         await this.PASSWORD_EDITBOX.fill(testConfig.password);
         await this.LOGIN_BUTTON.click();
     }
 
     async verifyProfilePage(): Promise<void> {
-        await expect(this.SEARCH_BOX).toBeVisible();
+        await expect(this.SIDEPANEL).toBeVisible();
     }
 }

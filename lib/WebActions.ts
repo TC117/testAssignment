@@ -15,14 +15,6 @@ export class WebActions {
         this.context = context;
     }
 
-    async decipherPassword(): Promise<string> {
-        const key = `SECRET`;
-        //ENCRYPT
-        // const cipher = CryptoJS.AES.encrypt('Demouat@09',key);
-        // console.log(cipher.toString());
-        return CryptoJS.AES.decrypt(testConfig.password, key).toString(CryptoJS.enc.Utf8);
-    }
-
     async delay(time: number): Promise<void> {
         return new Promise(function (resolve) {
             setTimeout(resolve, time);

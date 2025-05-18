@@ -6,10 +6,7 @@ test(`Verify Book Store Login`, { tag: '@Smoke'}, async ({ loginPage, webActions
     await test.step(`Navigate to Application`, async () => {
         await loginPage.navigateToURL();
     });
-    await test.step(`Click on Login button in Main page`, async () => {
-        await loginPage.clickOnLoginMainButton();
-    });
-    await test.step(`Login to Book Store application`, async () => {
+    await test.step(`Login to Application`, async () => {
         await loginPage.loginToApplication();
     });
     await test.step(`Verify User is logged in and navigated to Profile page`, async () => {
